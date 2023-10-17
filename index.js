@@ -28,6 +28,16 @@ app.get("/registration", (req, res)=>{
 
 const fn = __dirname + "/userList.csv";
 
+// API endpoints 
+app.get("/api", (req, res) =>{
+    const obj = {
+        message: "Server is well api",
+    }
+    res.json(obj)
+})
+
+// Server side rendering 
+
 app.post("/registration", (req, res) => {
     const {email, password} = req.body;
     // console.log("/registration", req.body)
